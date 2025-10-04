@@ -13,8 +13,12 @@ Timing uses **Timer1 in CTC mode @ 16 MHz**, and **external interrupts** handle 
 ---
 
 ## 📸 Demo
+<p align="center">
+  <video src="demo.mp4" controls width="640">
+    <a href="Stopwatch dual Demo.mp4">Watch the demo video</a>
+  </video>
+</p>
 
-- **Video:** 
 
 
 
@@ -117,7 +121,25 @@ Keep time in three bytes: `hours (0..99)`, `minutes (0..59)`, `seconds (0..59)`
 - **`void set_mode(enum {UP, DOWN})`** — switch LEDs, guard adjustments.
 
 ---
+## 🧪 Simulation (Proteus)
 
+This project was simulated and verified in **Proteus**.
+
+- **New Project:** 
+- **MCU:** ATmega32 @ **16 MHz**
+- **Display:** 6× 7-segment via **7447** BCD decoder, multiplexed by digit-enable transistors
+- **Inputs:** Reset (INT0), Pause (INT1), Resume (INT2), Mode toggle, H/M/S ±
+- **Outputs:** Mode LEDs, buzzer on zero
+
+### Run in Proteus
+1. Open `proteus/Stopwatch.pdsprj`.
+2. Confirm MCU clock = **16 MHz**.
+3. Load the generated HEX (`build/stopwatch.hex`) to the ATmega32 device.
+4. Press **Run**; use the buttons to pause/resume, toggle mode, and adjust H/M/S (when paused).
+
+> All **Proteus files** are included so you can reproduce the exact demo wiring and behavior.
+
+---
 ## 🧪 Usage
 
 1. **Power on** → **Count-Up** starts automatically (Up LED on).  
