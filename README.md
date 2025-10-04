@@ -13,11 +13,7 @@ Timing uses **Timer1 in CTC mode @ 16 MHz**, and **external interrupts** handle 
 ---
 
 ## 📸 Demo
-<p align="center">
-  <video src="demo.mp4" controls width="640">
-    <a href="Stopwatch dual Demo.mp4">Watch the demo video</a>
-  </video>
-</p>
+https://github.com/rowaidaEmad/Dual-Mode-Stopwatch-on-ATmega32/blob/main/Stopwatch%20dual%20Demo.mp4 
 
 
 
