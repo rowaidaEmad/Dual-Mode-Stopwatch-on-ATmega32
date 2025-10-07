@@ -121,34 +121,7 @@ ISR(TIMER1_COMPA_vect){
 		}
 	}
 }
-/*
-void Display_digits_low_logic(){
-	//PORTA->Enable , PORTC->decoder
-	PORTC = (PORTC & 0xF0) |(hr/10);
-	PORTA = (PORTA | 0X3F) & ~(1<<0) ; //SEGMENT of hour digit tenth
-	_delay_us(500);
-	PORTC = (PORTC & 0xF0) |(hr%10);
-	PORTA = (PORTA | 0X3F) & ~(1<<1) ; //SEGMENT of hour digit unit
 
-	_delay_us(500);
-	PORTC = (PORTC & 0xF0) |(min/10);
-	PORTA = (PORTA | 0X3F) & ~(1<<2) ; //SEGMENT of min digit tenth
-
-	_delay_us(500);
-	PORTC = (PORTC & 0xF0) |(min%10);
-	PORTA = (PORTA | 0X3F) & ~(1<<3); //SEGMENT of min digit unit
-
-	_delay_us(500);
-	PORTC = (PORTC & 0xF0) |(sec/10);
-	PORTA = (PORTA | 0X3F) & ~(1<<4) ; //SEGMENT of sec digit tenth
-
-	_delay_us(500);
-	PORTC = (PORTC & 0xF0) |(sec%10);
-	PORTA = (PORTA | 0X3F) & ~(1<<5) ; //SEGMENT of sec digit unit
-	_delay_us(500);
-
-}
-*/
 void Display_digits(void){
 	//PORTA->Enable , PORTC->decoder
     PORTA &= ~0x3F;   // all off
@@ -285,5 +258,6 @@ int main(void){
 
 }
 }
+
 
 
