@@ -8,7 +8,7 @@ A digital stopwatch built on **ATmega32** that supports **two modes**:
 Time is shown as **HH:MM:SS** on **six multiplexed 7-segment digits** driven through a **BCD-to-7-segment decoder (7447)**.  
 Timing uses **Timer1 in CTC mode @ 16 MHz**, and **external interrupts** handle **Reset / Pause / Resume**. Mode LEDs indicate **up / down**.
 
-> Firmware is written in **Embedded C** for AVR.
+> Firmware is written in **Embedded C** for AVR.     
 
 ---
 
